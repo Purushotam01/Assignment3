@@ -20,6 +20,5 @@ class TodoRepository {
   void addTodo(TodoModel todo) => box.add(todo);
 
   void updateTodo(int index, TodoModel todo) => box.putAt(index, todo);
-
   void deleteTodo(int index) => box.deleteAt(index);
 }
