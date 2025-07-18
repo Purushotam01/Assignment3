@@ -1,6 +1,4 @@
 import 'package:hive/hive.dart';
-import 'package:hive/hive.dart'; // Add this import for HiveField annotation
-import 'todo_model.g.dart';
 
 @HiveType(typeId: 0)
 class TodoModel extends HiveObject {
@@ -12,6 +10,7 @@ class TodoModel extends HiveObject {
 
   TodoModel({required this.title, this.isDone = false});
 }
+
 
 class TodoRepository {
   final Box<TodoModel> box = Hive.box<TodoModel>('todos');
